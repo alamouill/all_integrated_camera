@@ -2,7 +2,7 @@ from servo import *
 from camera import *
 from ultimate_gps import *
 from imu import *
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Markup
 app = Flask(__name__)
 import time
 import math
@@ -18,6 +18,9 @@ def main():
     templateData = {
         'title' : 'PiCam'
         }
+
+    imu=imu_current_value()
+    gps=gps_current_value ()
     # Pass the template data into the template picam.html and return it to the user
     return render_template('webinterface.html', **templateData)
 
@@ -50,6 +53,9 @@ def move(direction):
         print('Going back')
         #thymio_go_backward()
     return 'OK'
+
+
+
 
 if __name__ == "__main__":
     init_servo()

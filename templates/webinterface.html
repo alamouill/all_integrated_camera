@@ -43,8 +43,8 @@
             <td>
                 <p><span style="text-decoration: underline;"><strong>Sensor Data</strong></span>
                 </p>
-                <p>. GPS</p>
-                <p>. IMU</p>
+                <p>. GPS:<input type="gps" name="gps" class="form-control" id="gps" placeholder="{{ gps }}"   required></p>
+                <p>. IMU:<input type="imu" name="imu" class="form-control" id="imu" placeholder="{{ imu }}"   required> </p>
             </td>
         </tr>
         <tr>
@@ -69,7 +69,7 @@
                         <input id="btnLeft" type="button" value="Left" onclick="Button_onclick('left')" />
                     </td>
                     <td style="text-align: center">
-                        <input id="btnRight" type="button" value="Right" onclick="Button_onclick('right')" />
+                        <input id="btnRight" type="image" src="apple.png" onclick="Button_onclick('right')" />
                     </td>
                 </tr>
                 <tr>
