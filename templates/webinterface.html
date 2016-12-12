@@ -1,131 +1,129 @@
 <head>
-<style type="text/css">
-.style1
-{
-width: 50%;
-}
-</style>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script language="javascript" type="text/javascript">
-
-function Button_onclick(direction) {
-$.ajax({ url: '/' + direction });
-}
-
-</script>
+    <style type="text/css">
+        .style1 {
+            width: 50%;
+        }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+        function Button_onclick(direction) {
+            $.ajax({
+                url: '/' + direction
+            });
+        }
+    </script>
 </head>
 
 <table style="height: 63px; margin-left: auto; margin-right: auto;" border="2" width="755">
-<tbody>
-<tr>
-<td>
-<h1 style="text-align: center;"><span style="color: #333399;">All Integrated Camera For Thymio</span></h1>
-</td>
-</tr>
-</tbody>
+    <tbody>
+        <tr>
+            <td>
+                <h1 style="text-align: center;"><span style="color: #333399;">All Integrated Camera For Thymio</span></h1>
+            </td>
+        </tr>
+    </tbody>
 </table>
 <h2 style="text-align: left;">&nbsp;</h2>
 <table style="height: 55px; margin-left: auto; margin-right: auto;" width="755">
-<tbody>
-<tr>
-<td>
-<h2><span style="text-decoration: underline; color: #333399;">Control the Camera</span></h2>
-</td>
-</tr>
-</tbody>
+    <tbody>
+        <tr>
+            <td>
+                <h2><span style="text-decoration: underline; color: #333399;">Control the Camera</span></h2>
+            </td>
+        </tr>
+    </tbody>
 </table>
 <table style="height: 400px; margin-left: auto; margin-right: auto;" border="1" width="755">
-<tbody>
-<tr>
-<td < style="text-align: center;"><strong><span style="text-decoration: underline;">Live Video Feed</span></strong>                 
-<img src="http://0.0.0.0:8080/?action=stream"/> 
-</td>
+    <tbody>
+        <tr>
+            <td < style="text-align: center;"><strong><span style="text-decoration: underline;">Live Video Feed</span></strong>
+                <img src="http://0.0.0.0:8080/?action=stream" />
+            </td>
 
-<td>
-<p><span style="text-decoration: underline;"><strong>Sensor Data</strong></span></p>
-<p>. GPS</p>
-<p>. IMU</p>
-</td>
-</tr>
-<tr>
-<td style="text-align: center;" colspan="2">
-<p><input id="TakePicture" type="button" value="Take Picture" onclick="Button_onclick('takepicture')" />
-<p><input id="ToOrigin" type="button" value="Set camera To Origin" onclick="Button_onclick('toorigin')" />
-</td>
-</tr>
+            <td>
+                <p><span style="text-decoration: underline;"><strong>Sensor Data</strong></span>
+                </p>
+                <p>. GPS</p>
+                <p>. IMU</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" colspan="2">
+                <p>
+                    <input id="TakePicture" type="button" value="Take Picture" onclick="Button_onclick('takepicture')" />
+                    <p>
+                        <input id="ToOrigin" type="button" value="Set camera To Origin" onclick="Button_onclick('toorigin')" />
+            </td>
+        </tr>
 
-</tr>
-<td style="text-align: center;" colspan="2">
-<table align="center" class="style1">
-<tr>
-<td colspan="2" style="text-align: center">
-<input id="btnUp" type="button" value="Up" onclick="Button_onclick('up')" />
-</td>
-</tr>
-<tr>
-<td style="text-align: center">
-<input id="btnLeft" type="button" value="Left" onclick="Button_onclick('left')" />
-</td>
-<td style="text-align: center">
-<input id="btnRight" type="button" value="Right" onclick="Button_onclick('right')" />
-</td>
-</tr>
-<tr>
-<td colspan="2" style="text-align: center">
-<input id="btnDown" type="button" value="Down" onclick="Button_onclick('down')" />
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-<
-
-
-
-<p>&nbsp;</p>
-<table style="height: 55px; margin-left: auto; margin-right: auto;" width="759">
-<tbody>
-<tr>
-<td>
-<h2><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">Control the&nbsp;Thymio</span></span></h2>
-</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
-
-
-<table style=" margin-left: auto; margin-right: auto;" border="1" width="755">
-<tbody>
-<tr>
-<td>
-<table align="center" class="style1">
-<tr>
-<td colspan="2" style="text-align: center">
-<input id="btnFrontThymio" type="button" value="Front" onclick="Button_onclick('front')" />
-</td>
-</tr>
-<tr>
-<td style="text-align: center">
-<input id="btnLeftThymio" type="button" value="Left" onclick="Button_onclick('leftT')" />
-</td>
-<td style="text-align: center">
-<input id="btnRightThymio" type="button" value="Right" onclick="Button_onclick('rightT')" />
-</td>
-</tr>
-<tr>
-<td colspan="2" style="text-align: center">
-<input id="btnBAckThymio" type="button" value="Back" onclick="Button_onclick('back')" />
-</td>
-</tr>
+        </tr>
+        <td style="text-align: center;" colspan="2">
+            <table align="center" class="style1">
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <input id="btnUp" type="button" value="Up" onclick="Button_onclick('up')" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center">
+                        <input id="btnLeft" type="button" value="Left" onclick="Button_onclick('left')" />
+                    </td>
+                    <td style="text-align: center">
+                        <input id="btnRight" type="button" value="Right" onclick="Button_onclick('right')" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <input id="btnDown" type="button" value="Down" onclick="Button_onclick('down')" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+        </tr>
+    </tbody>
 </table>
 
-</td>
-</tr>
-</tbody>
-</table>
+
+
+< <p>&nbsp;</p>
+    <table style="height: 55px; margin-left: auto; margin-right: auto;" width="759">
+        <tbody>
+            <tr>
+                <td>
+                    <h2><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">Control the&nbsp;Thymio</span></span></h2>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>&nbsp;</p>
+
+
+    <table style=" margin-left: auto; margin-right: auto;" border="1" width="755">
+        <tbody>
+            <tr>
+                <td>
+                    <table align="center" class="style1">
+                        <tr>
+                            <td colspan="2" style="text-align: center">
+                                <input id="btnFrontThymio" type="button" value="Front" onclick="Button_onclick('front')" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">
+                                <input id="btnLeftThymio" type="button" value="Left" onclick="Button_onclick('leftT')" />
+                            </td>
+                            <td style="text-align: center">
+                                <input id="btnRightThymio" type="button" value="Right" onclick="Button_onclick('rightT')" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center">
+                                <input id="btnBAckThymio" type="button" value="Back" onclick="Button_onclick('back')" />
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
