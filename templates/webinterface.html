@@ -1,10 +1,11 @@
+<html>
 <head>
     <style type="text/css">
         .style1 {
             width: 50%;
         }
     </style>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script language="javascript" type="text/javascript">
         function Button_onclick(direction) {
             $.ajax({
@@ -12,28 +13,38 @@
             });
         }
     </script>
+	<title>All Integrated Camera For Thymio </title>
 </head>
-
-<table style="height: 63px; margin-left: auto; margin-right: auto;" border="2" width="755">
+<style>
+body
+{
+	background-image: url("background.png");
+	font-family: Arial, Helvetica, sans-serif;	
+	font-size: 14px;
+	color:#fff;
+}
+</style>
+<body>
+<table style="height: 100px; margin-left: auto; margin-right: auto;background-color: #000000;width: 100%" >
     <tbody>
         <tr>
             <td>
-                <h1 style="text-align: center;"><span style="color: #333399;">All Integrated Camera For Thymio</span></h1>
+                <h1 style="text-align: center;"><span style="color: #f2f2f2;">All Integrated Camera For Thymio</span></h1>
             </td>
         </tr>
     </tbody>
 </table>
 <h2 style="text-align: left;">&nbsp;</h2>
-<table style="height: 55px; margin-left: auto; margin-right: auto;" width="755">
+<table style="height: 55px; margin-left: auto; margin-right: auto;width=100%" >
     <tbody>
         <tr>
             <td>
-                <h2><span style="text-decoration: underline; color: #333399;">Control the Camera</span></h2>
+                <h2><span style="text-decoration: underline; color: #f2f2f2;">Control the Camera</span></h2>
             </td>
         </tr>
     </tbody>
 </table>
-<table style="height: 400px; margin-left: auto; margin-right: auto;" border="1" width="755">
+<table style="height: 400px; margin-left: auto; margin-right: auto; width:750px"  >
     <tbody>
         <tr>
             <td < style="text-align: center;"><strong><span style="text-decoration: underline;">Live Video Feed</span></strong>
@@ -49,48 +60,56 @@
         </tr>
         <tr>
             <td style="text-align: center;" colspan="2">
-                <p>
-                    <input id="TakePicture" type="button" value="Take Picture" onclick="Button_onclick('takepicture')" />
-                    <p>
-                        <input id="ToOrigin" type="button" value="Set camera To Origin" onclick="Button_onclick('toorigin')" />
+                    <input id="TakePicture" type="image" src="camera.png"  onclick="Button_onclick('takepicture')" />
             </td>
         </tr>
+</table>
 
-        </tr>
-        <td style="text-align: center;" colspan="2">
-            <table align="center" class="style1">
-                <tr>
-                    <td colspan="2" style="text-align: center">
-                        <input id="btnUp" type="button" value="Up" onclick="Button_onclick('up')" />
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: center">
-                        <input id="btnLeft" type="button" value="Left" onclick="Button_onclick('left')" />
-                    </td>
-                    <td style="text-align: center">
-                        <input id="btnRight" type="image" src="apple.png" onclick="Button_onclick('right')" />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align: center">
-                        <input id="btnDown" type="button" value="Down" onclick="Button_onclick('down')" />
-                    </td>
-                </tr>
-            </table>
-        </td>
-        </tr>
-    </tbody>
+
+<table style="height: 200px; margin-left: auto; margin-right: auto; width:200px" >
+	<tr>
+		<td style="text-align: center">
+			 
+		</td>
+		<td colspan="2" style="text-align: center">
+			<input id="btnUp" type="image" src="up.png" onclick="Button_onclick('up')" />
+		</td>
+		<td style="text-align: center">
+		  
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align: center">
+			<input id="btnLeft" type="image" src="left.png" onclick="Button_onclick('left')" />
+		</td>
+		<td colspan="2" style="text-align: center">
+			<input id="ToOrigin" type="image" src="backto0.png" onclick="Button_onclick('toorigin')" />
+		</td>
+		<td style="text-align: center">
+			<input id="btnRight" type="image" src="right.png" onclick="Button_onclick('right')" />
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align: center">
+		  
+		</td>
+		<td colspan="2" style="text-align: center">
+			<input id="btnDown" type="image" src="down.png" onclick="Button_onclick('down')" />
+		</td>
+		<td style="text-align: center">
+		  
+		</td>
+	</tr>
 </table>
 
 
 
 < <p>&nbsp;</p>
-    <table style="height: 55px; margin-left: auto; margin-right: auto;" width="759">
+    <table style="height: 55px; margin-left: auto; margin-right: auto;width=100%" >
         <tbody>
             <tr>
                 <td>
-                    <h2><span style="text-decoration: underline;"><span style="color: #333399; text-decoration: underline;">Control the&nbsp;Thymio</span></span></h2>
+                    <h2><span style="text-decoration: underline;"><span style="color: #f2f2f2; text-decoration: underline;">Control the&nbsp;Thymio</span></span></h2>
                 </td>
             </tr>
         </tbody>
@@ -98,7 +117,7 @@
     <p>&nbsp;</p>
 
 
-    <table style=" margin-left: auto; margin-right: auto;" border="1" width="755">
+    <table style=" margin-left: auto; margin-right: auto;width=750"  >
         <tbody>
             <tr>
                 <td>
@@ -127,3 +146,5 @@
             </tr>
         </tbody>
     </table>
+</body>
+</html>
