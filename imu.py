@@ -50,21 +50,34 @@ def init_imu():
 
 def imu_current_value():
     global imu
+    SETTINGS_FILE = "RTIMULib"
+    
+    s = RTIMU.Settings(SETTINGS_FILE)
+    imu = RTIMU.RTIMU(s)
+
+    # Set fusion parameters
+
+    imu.setSlerpPower(0.02)
+    imu.setGyroEnable(True)
+    imu.setAccelEnable(True)
+    imu.setCompassEnable(True)
+
+    poll_interval = imu.IMUGetPollInterval()
+
     if imu.IMURead():
         # x, y, z = imu.getFusionData()
         # print("%f %f %f" % (x,y,z))
         data = imu.getIMUData()
         fusionPose = data["fusionPose"]
-        print("r: %f p: %f y: %f" , math.degrees(fusionPose[0]),math.degrees(fusionPose[1]), math.degrees(fusionPose[2]))
-        return 'r'+str(math.degrees(fusionPose[0]))+'p'+str(math.degrees(fusionPose[1]))+'y'+str(math.degrees(fusionPose[2]))
-
+        return "IMU Test r: imu r: %f p: %f y: %f" , math.degrees(fusionPose[0]),math.degrees(fusionPose[1]), math.degrees(fusionPose[2])
     else :
-        print("No IMU Data")
-        return "Unable to Get IMU Data"
+        return "IMU Test Unable to Get IMU Data"
+
 
 if __name__=='__main__':
     init_imu()
     while (True):
         imu_current_value()
         time.sleep(.5)
-        
+        result=imu_get_rpy()
+        print(result)        

@@ -25,6 +25,7 @@ def init_servo () :
     wiringpi.pwmSetRange(2000)
      
     delay_period = 0.01
+    print ("Servo initialises")
      
 
 def set_tilt (angle1=0):
@@ -101,7 +102,7 @@ def servo_pan_left ():
     global increment
     prev_angle2-=increment
     angle_per_sec=156
-    pulse2=144
+    pulse2=140
     #set the time during wich the PWM is differents than NO MOVE
     sleep2 = math.fabs(float(increment)/float(angle_per_sec))
     #set speed
@@ -114,10 +115,9 @@ def servo_pan_left ():
 def servo_pan_right ():
     global prev_angle2
     global increment
-    diff_angle2=increment
     prev_angle2 +=increment
     angle_per_sec=140
-    pulse2=156
+    pulse2=160
     #set the time during wich the PWM is differents than NO MOVE
     sleep2 = math.fabs(float(increment)/float(angle_per_sec))
     #set speed
