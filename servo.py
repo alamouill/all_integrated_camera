@@ -6,7 +6,7 @@ import wiringpi
 #initiate previous angle
 prev_angle2 = 0
 angle1=0
-increment=10
+increment=7
 def init_servo () : 
     # use 'GPIO naming'
     wiringpi.wiringPiSetupGpio()
@@ -38,7 +38,7 @@ def set_tilt (angle1=0):
         angle1 = 0
 
     #calculate pluse width
-    pulse1 = int(angle1*1.05555+55) 
+    pulse1 = int(angle1*1.055+55) 
     wiringpi.pwmWrite(19, pulse1)
 
 def servo_tilt_up ():
@@ -46,9 +46,10 @@ def servo_tilt_up ():
     global angle1
     global increment
     angle1+=increment
-    if angle1>180:
-        print ('angle to big, setting to 180')
-        angle1 = 180
+    print(angle1)
+    if angle1>45:
+        print ('angle to big, setting to 45')
+        angle1 = 45
     pulse1 = int(angle1*1.05555+55) 
     wiringpi.pwmWrite(19, pulse1)
 

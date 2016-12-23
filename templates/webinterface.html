@@ -12,13 +12,18 @@
                 url: '/' + direction
             });
         }
+        function GetSensor_info(){
+			$.ajax({
+					url: '/' + sensor_read
+				});
+		}
     </script>
 	<title>All Integrated Camera For Thymio </title>
 </head>
 <style>
 body
 {
-	background-image: url("background.png");
+	background-image: url("static/css/images/background/background.png");
 	font-family: Arial, Helvetica, sans-serif;	
 	font-size: 14px;
 	color:#fff;
@@ -48,7 +53,7 @@ body
     <tbody>
         <tr>
             <td < style="text-align: center;"><strong><span style="text-decoration: underline;">Live Video Feed</span></strong>
-                <img src="http://0.0.0.0:8080/?action=stream" />
+                <img src="http://0.0.0.0:8080/?action=stream"/>
             </td>
 
             <td>
@@ -72,7 +77,7 @@ body
 					 
 				</td>
 				<td colspan="2" style="text-align: center">
-					<input id="btnUp" type="image" src="up.png" onclick="Button_onclick('up')" />
+					<input id="btnUp" type="image" src={{ url_for('static', filename = 'css/images/icons/up.png') }} onclick="Button_onclick('up')" />
 				</td>
 				<td style="text-align: center">
 				  
@@ -80,13 +85,13 @@ body
 			</tr>
 			<tr>
 				<td style="text-align: center">
-					<input id="btnLeft" type="image" src="left.png" onclick="Button_onclick('left')" />
+					<input id="btnLeft" type="image" src={{ url_for('static', filename = 'css/images/icons/left.png') }} onclick="Button_onclick('left')" />
 				</td>
 				<td colspan="2" style="text-align: center">
-					<input id="ToOrigin" type="image" src="backto0.png" onclick="Button_onclick('toorigin')" />
+					<input id="ToOrigin" type="image" src={{ url_for('static', filename = 'css/images/icons/backto0.png') }} onclick="Button_onclick('toorigin')" />
 				</td>
 				<td style="text-align: center">
-					<input id="btnRight" type="image" src="right.png" onclick="Button_onclick('right')" />
+					<input id="btnRight" type="image" src={{ url_for('static', filename = 'css/images/icons/right.png') }} onclick="Button_onclick('right')" />
 				</td>
 			</tr>
 			<tr>
@@ -94,7 +99,7 @@ body
 				  
 				</td>
 				<td colspan="2" style="text-align: center">
-					<input id="btnDown" type="image" src="down.png" onclick="Button_onclick('down')" />
+					<input id="btnDown" type="image" src={{ url_for('static', filename = 'css/images/icons/down.png') }} onclick="Button_onclick('down')" />
 				</td>
 				<td style="text-align: center">
 				  
@@ -103,7 +108,7 @@ body
 		</table>
 	</td>
 	<td style="text-align: center;" >
-         <input id="TakePicture" type="image" src="camera.png"  onclick="Button_onclick('takepicture')" />
+         <input id="TakePicture" type="image" src={{ url_for('static', filename = 'css/images/icons/camera.png') }}  onclick="Button_onclick('takepicture')" />
     </td>
 </table>
 

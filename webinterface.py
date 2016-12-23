@@ -58,7 +58,7 @@ def update_sensor():
 
 if __name__ == "__main__":
     init_servo()
- #   init_imu()
+    init_imu()
     init_gps()
 #    camera_begin_stream()
     app.run(host='0.0.0.0', port=8000, debug=True)
