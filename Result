@@ -1,0 +1,63 @@
+----------------------------------------------SERVEUR-------------
+
+pi@raspberrypi:~/Desktop/bloop $ sudo python server2.py
+Serveur prêt, en attente de requêtes ... 
+
+Servo initialises
+Using settings file RTIMULib.ini
+IMU Name: L3GD20H + LSM303DLHC
+IMU Init Succeeded
+Recommended Poll Interval: 8mS
+
+No IMU Data in
+Waiting For new message 
+
+Begining Data Transmission 
+Client Thread-1 connecté, adresse IP 192.168.43.153, port 58905. 
+
+
+gps not fixed
+Data Transmission ACheived 
+
+Begining Data Transmission 
+
+gps not fixed
+Data Transmission ACheived 
+
+Begining Data Transmission 
+
+gps not fixed
+Data Transmission ACheived 
+
+Begining Data Transmission 
+
+**camera_take_picture** de Thread-1 
+
+camera_take_picture 
+
+-----------------------------------------CLIENT--------------------
+C:\Users\arman\OneDrive\cours\Master\Projet de semestre\all_integrated_camera\client.py 
+Connexion établie avec le serveur.
+
+In the receive message Thread 
+Sending Command 
+
+
+*Vous etes connecte. Envoyez vos messages. 
+*
+Sending Command 
+
+
+In the receive message Thread 
+
+*IMU,IMU Test Unable to Get IMU Data
+GPS,gps not fixed
+IMU,IMU Test Unable to Get IMU Data
+GPS,gps not fixed
+IMU,IMU Test Unable to Get IMU Data
+GPS,gps not fixed
+*
+
+Just received New imu Data 
+
+In the receive message Thread 
